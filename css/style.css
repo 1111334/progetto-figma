@@ -6,6 +6,12 @@
 
 img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .hnf-message {
@@ -69,6 +75,7 @@ header .container {
     padding: 20px 3rem;
     align-items: center;
     justify-content: space-around;
+    position: relative;
 }
 
 .container .container-logo {
@@ -125,6 +132,7 @@ header .container {
     background: none;
 }
 
+
 .container-list-icon {
     margin-inline-start: 1.5rem;
 }
@@ -149,8 +157,61 @@ header .container {
     background-color: #CCCCCC;
 }
 
-.container-list-icon ul li .menu {
-    border: none;
+.container-menu {
+    /* width: 40%; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-check {
+    display: none;
+}
+
+.menu-check {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.menu-check .hamburger {
+    width: 24px;
+    height: 0.20rem;
+    background: #333;
+    margin-bottom: 5px;
+}
+
+#menu-check:checked~.dropdown {
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 1;
+}
+
+.dropdown ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+.dropdown ul li {
+    margin: 10px 10px
+}
+
+.dropdown ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
 }
 
 .content-body {
@@ -251,6 +312,7 @@ header .container {
 .image-container {
     display: flex;
     padding: 0px 40px;
+    margin-bottom: 75px;
 }
 
 img {
@@ -295,4 +357,544 @@ img {
     /* flex-shrink: 2; */
 }
 
-@media screen and (min-width: 1024px) {}
+.container-offerte {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container-offerte .img-offerta {
+    width: 100%;
+    padding: 0 48px;
+}
+
+.container-info-offerta {
+    width: 100%;
+    display: flex;
+    padding: 0px 48px;
+}
+
+.container-info-offerta .info-offerta {
+    width: 100%;
+    background-color: #78B82A;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: -5px;
+    padding: 90px 0px 90px 80px;
+}
+
+.info-offerta .subtitle {
+    font-size: 1.5rem;
+    line-height: 1.45;
+    letter-spacing: -0.0042em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 8px;
+}
+
+.info-offerta .description {
+    line-height: 1.45;
+    letter-spacing: -0.0042em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.description p {
+    font-size: 1rem;
+}
+
+.description a {
+    color: black;
+}
+
+.description button {
+    background-color: black;
+    padding: 13px 26px 13px 26px;
+    border-radius: 64px;
+    border: none;
+}
+
+.description button:hover {
+    background-color: #414040;
+}
+
+.btn-project {
+    margin-top: 35px;
+}
+
+.description button a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.container-carousel {
+    width: 100%;
+    display: flex;
+    /* background-color: gray;  */
+    padding: 0px 48px;
+    margin-bottom: 80px;
+}
+
+.container-carousel .content-carousel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: orange; */
+    padding: 70px 0px 0px 0px;
+}
+
+.container-carousel .content-carousel .subtitle-carousel {
+    width: 50%;
+    /* background-color: blue; */
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+}
+
+.container-carousel .carousel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* background-color: green; */
+    padding: 20px 0px 20px 0px;
+    overflow: auto;
+    gap: 20px;
+}
+
+.carousel::-webkit-scrollbar {
+    width: 10px;
+    height: 3px;
+}
+
+.carousel::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Colore dello sfondo della barra di scorrimento */
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Colore del cursore della barra di scorrimento */
+}
+
+.carousel::-webkit-scrollbar-thumb:hover {
+    background: black;
+    /* Colore del cursore della barra di scorrimento quando si passa il mouse sopra */
+    cursor: pointer;
+}
+
+.container-carousel .carousel .img-carousel {
+    flex: 0 0 auto;
+    width: 231.75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.img-carousel {
+    position: relative;
+}
+
+.img-carousel .description {
+    width: 100%;
+    padding: 40px 30px 0px 30px;
+    /* margin-bottom: 100px; */
+}
+
+.img-carousel .description h4 {
+    color: white;
+    line-height: 25px;
+}
+
+.button-img-carousel {
+    width: 100%;
+    height: 50px;
+    /* background-color: green; */
+    padding: 0px 0px 80px 30px;
+}
+
+.button-img-carousel button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+}
+
+.button-img-carousel button:hover {
+    background-color: rgb(245, 241, 241);
+}
+
+.button {
+    width: 100%;
+    position: absolute;
+    top: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button .btn {
+    width: 70%;
+    /* flex-wrap: wrap; */
+    border: none;
+    background-color: white;
+    border-radius: 20px;
+    min-height: 2.5rem;
+    padding: 0 1.5rem;
+}
+
+.button .btn a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: .75rem;
+}
+
+.container-description-carousel {
+    width: 100%;
+    display: flex;
+}
+
+.container-description-carousel .subtitle-carousel-two {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 40px;
+    padding: 0 48px;
+}
+
+.container-description-carousel .subtitle-carousel-two h2 {
+    font-size: 1.5rem;
+    line-height: 1.45;
+    letter-spacing: -0.0042em;
+}
+
+.container-description-carousel .subtitle-carousel-two .btn {
+    border: none;
+    background-color: white;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding: 11px 17px;
+}
+
+.container-description-carousel.subtitle-carousel-two .btn:hover {
+    border: 2px solid black;
+}
+
+.container-description-carousel .subtitle-carousel-two .btn a {
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.carousel-two {
+    width: 100%;
+    display: flex;
+    padding: 0px 48px;
+}
+
+.carousel-two .content-carousel-two {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    overflow: auto;
+    padding-bottom: 20px;
+}
+
+.carousel-two .content-carousel-two .content-img-and-description {
+    width: 284px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.content-img-and-description .img-carousel {
+    width: 284px;
+    height: 284px;
+}
+
+.img-carousel img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.content-img-and-description .description-img-carousel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+/*!
+Questo selettore CSS utilizza il pseudo-selettore :nth-last-child(-n+3) 
+per selezionare gli ultimi tre elementi con la classe 
+.content-img-and-description.
+Il -n+3 è un'espressione che indica "gli ultimi 3 elementi".
+Quindi, .content-img-and-description:nth-last-child(-n+3) 
+.subtitle seleziona gli elementi con la classe .subtitle che 
+sono figli degli ultimi tre elementi con la classe 
+.content-img-and-description.
+Lo stesso vale per .content-img-and-description:nth-last-child(-n+3) 
+.description, che seleziona gli elementi con la classe .description 
+che sono figli degli ultimi tre elementi con la classe .content-img-and-description.
+*/
+.content-img-and-description:nth-last-child(-n+3) .subtitle {
+    color: black;
+}
+
+.content-img-and-description:nth-last-child(-n+3) .description {
+    color: rgb(54, 54, 54);
+}
+
+.description-img-carousel .subtitle {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 3px;
+    padding-inline-start: 30px;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.description-img-carousel .description {
+    padding: 0px 30px;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: rgb(224, 222, 222);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 70px;
+}
+
+.button-carousel-two {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px 0px 35px 35px;
+    border-radius: 50%;
+}
+
+.button-carousel-two button {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button-carousel-two .btn-carousel a svg {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.button-carousel-two .btn-carousel-two a svg {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-carousel-two:nth-last-child(-n+3) .btn-carousel-two {
+    background-color: black;
+    fill: white;
+}
+
+.content-carousel-two::-webkit-scrollbar {
+    width: 10px;
+    height: 3px;
+}
+
+.content-carousel-two::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Colore dello sfondo della barra di scorrimento */
+}
+
+.content-carousel-two::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Colore del cursore della barra di scorrimento */
+}
+
+.content-carousel-two::-webkit-scrollbar-thumb:hover {
+    background: black;
+    /* Colore del cursore della barra di scorrimento quando si passa il mouse sopra */
+    cursor: pointer;
+}
+
+.news-section-two {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 48px;
+    /* background-color: red; */
+    margin: 80px 0px 30px 0px;
+    position: relative;
+}
+
+.news-section-two .section-subtitle,
+.section-description {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 0px 8px 0px;
+    line-height: 22px;
+}
+
+.news-section-two .section-description {
+    width: 56%;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: rgb(83, 83, 83);
+}
+
+.news-section-two .section-button {
+    position: absolute;
+    right: 30px;
+    top: 32px;
+}
+
+.news-section-two .section-button .btn-news {
+    width: 328.3px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: white;
+    border: 1px solid;
+}
+
+.news-section-two .section-button .btn-news a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.container-images {
+    width: 100%;
+    display: flex;
+    padding: 0 38px;
+    /* background-color: red; */
+}
+
+.content-image-1,
+.content-image-2,
+.content-image-3 {
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content-image-1 {
+    /* background-color: yellow; */
+}
+
+.content-image-2 {
+    /* background-color: green; */
+
+}
+
+.content-image-3 {
+    /* background-color: violet; */
+}
+
+.img-1,
+.img-5 {
+    max-height: 228.27px;
+    flex: 1 1 auto;
+}
+
+.img-2,
+.img-4 {
+    max-height: 311.02px;
+    flex: 1 2 auto;
+}
+
+.img-3 {
+    max-height: 559.28px;
+    flex: 3 4 auto;
+}
+
+.content-image-3 {
+    /* background-color: red; */
+}
+
+.pub__simple-video {
+    max-height: auto;
+    width: 100%;
+}
+
+.section-pagamento-rate {
+    display: flex;
+    width: 100%;
+}
+
+.section-pagamento-rate .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: yellow; */
+    padding: 0 48px;
+    margin-top: 70px;
+}
+
+.section-pagamento-rate .content img {
+    max-height: 512px;
+}
+
+.container-description-rate {
+    display: flex;
+    /* background-color: blue; */
+    padding: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-description-rate .subtitle-rate {
+    max-width: 78%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-description-rate .subtitle-rate h2 {
+    margin-bottom: 12px;
+}
+
+.content-description-rate p:nth-of-type(1) {
+    color: rgb(110, 110, 110);
+    line-height: 1.45;
+}
+
+.content-description-rate p {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.content-description-rate p:last-of-type {
+    margin-bottom: 40px;
+}
+
+.btn-rate {
+    max-width: 121.56px;
+    max-height: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: black;
+    padding: 13px;
+    font-weight: bold;
+}
+
+.btn-rate a {
+    text-decoration: none;
+    color: white;
+}
+
+/* @media screen and (min-width: 1024px) {} */
