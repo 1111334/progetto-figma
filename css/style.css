@@ -47,10 +47,11 @@ h2 {
 .button-row button {
     border: none;
     padding: 5px 3px 3px 3px;
-    background: none;
+    background-color: transparent;
     margin-inline-end: -0.375rem;
-    border-radius: 50%;
-
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
 }
 
 .button-row button:hover {
@@ -165,7 +166,7 @@ header .container {
     align-items: center;
 }
 
-#menu-check {
+/* #menu-check {
     display: none;
 }
 
@@ -201,7 +202,6 @@ header .container {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    /* gap: 10px; */
 }
 
 .dropdown ul li {
@@ -212,7 +212,7 @@ header .container {
     text-decoration: none;
     color: black;
     font-size: 15px;
-}
+} */
 
 .content-body {
     display: flex;
@@ -296,7 +296,7 @@ header .container {
     padding: 13px 20px 13px 20px;
     background: none;
     border: none;
-    border: 1px solid;
+    border: 1px solid black;
 }
 
 .news-content .news-button a {
@@ -306,7 +306,8 @@ header .container {
 }
 
 .news-content .news-button:hover {
-    border: 2px solid black;
+    border-color: black;
+    border-width: 2px solid black;
 }
 
 .image-container {
@@ -505,6 +506,11 @@ img {
 .img-carousel .description h4 {
     color: white;
     line-height: 25px;
+}
+
+.img-carousel .description h4:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .button-img-carousel {
@@ -778,59 +784,52 @@ che sono figli degli ultimi tre elementi con la classe .content-img-and-descript
 }
 
 .container-images {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     padding: 0 38px;
-    /* background-color: red; */
+    display: flex;
+    flex-direction: flex;
+    gap: 10px;
+    flex: 1;
+}
+
+.content-image-1 {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.content-image-2  {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+/* .content-image-1 img:nth-of-type(1) {
+    height: 350px;
+} */
+
+.content-image-2 img:nth-of-type(2) {
+    height: 250px;
 }
 
 .content-image-1,
 .content-image-2,
 .content-image-3 {
-    height: auto;
-    margin: 10px;
+    margin: 5px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.content-image-1 {
-    /* background-color: yellow; */
-}
-
-.content-image-2 {
-    /* background-color: green; */
-
+    justify-content: center;
+    align-items: center;
 }
 
 .content-image-3 {
+    flex: 1 4 auto;  
     /* background-color: violet; */
 }
 
-.img-1,
-.img-5 {
-    max-height: 228.27px;
-    flex: 1 1 auto;
-}
-
-.img-2,
-.img-4 {
-    max-height: 311.02px;
-    flex: 1 2 auto;
-}
-
-.img-3 {
-    max-height: 559.28px;
-    flex: 3 4 auto;
-}
-
-.content-image-3 {
-    /* background-color: red; */
-}
-
 .pub__simple-video {
-    max-height: auto;
     width: 100%;
+    height: auto;
 }
 
 .section-pagamento-rate {
@@ -896,5 +895,359 @@ che sono figli degli ultimi tre elementi con la classe .content-img-and-descript
     text-decoration: none;
     color: white;
 }
+
+.description-product-end-home-service {
+    display: flex;
+    width: 100%;
+    padding: 0 48px;
+    flex-direction: column;
+}
+
+.description-product-end-home-service p:nth-of-type(1),
+p:nth-of-type(2),
+p:nth-of-type(3) {
+    line-height: 1.45;
+    letter-spacing: -0.0042em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 12px;
+}
+
+.description-product-end-home-service div {
+    width: 55%;
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.description-product-end-home-service div a {
+    text-decoration: none;
+    color: black;
+}
+
+.linea {
+    display: flex;
+    margin: 40px 57px 60px 48px;
+    background-color: rgb(219, 217, 217);
+    height: 0.5px;
+}
+
+.informativa-whatsapp {
+    width: 58%;
+    display: flex;
+    padding: 0 48px;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.45;
+    letter-spacing: -0.0042em;
+}
+
+.linea-2 {
+    display: flex;
+    margin: 40px 0px 20px 0px;
+    background-color: rgb(243, 240, 240);
+    height: 0.5px;
+}
+
+.button-scroll-up {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.button-scroll-up .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    padding: 0 48px;
+    background-color: #F5F5F5;
+}
+
+.footer-container {
+    width: 100%;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    height: 100%;
+    flex-direction: column;
+    padding: 4rem 0 0 0;
+
+}
+
+.footer-container .footer-content {
+    width: 100%;
+    display: flex;
+}
+
+.footer-container .footer-content .footer-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    padding-inline-end: 8%;
+}
+
+.footer-container .footer-content .footer-column .footer-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.571;
+    font-weight: bold;
+}
+
+.footer-description p:nth-of-type(1),
+p:nth-of-type(2) {
+    margin-bottom: 20px;
+    font-size: .875rem;
+    line-height: 1.571;
+}
+
+.footer-description a {
+    margin-bottom: 10px;
+    color: black;
+    font-size: .875rem;
+    line-height: 1.571;
+}
+
+.footer-description button {
+    margin-bottom: 40px;
+}
+
+.footer-description button {
+    width: 144.17px;
+    height: 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    border: none;
+    background-color: black;
+}
+
+.footer-description button:hover {
+    background-color: #202020;
+}
+
+.footer-description button a {
+    text-decoration: none;
+    color: white;
+    font-size: .75rem;
+}
+
+.container-footer-list {
+    margin: 0 auto;
+    flex-basis: 70%;
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.footer-list {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    font-size: .875rem;
+    line-height: 1.571;
+    padding-inline-end: 12px;
+}
+
+.footer-list .title {
+    margin-bottom: 20px;
+}
+
+.footer-list ul{
+    list-style-type: none;
+}
+
+.footer-list ul li {
+    margin: 0px 0px 19px 0px;
+}
+
+.footer-list ul li a {
+    text-decoration: none;
+    color: rgb(75, 74, 74);
+    font-size: 14px;
+    line-height: 1.571;
+}
+
+.footer-list ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-social-end-pay-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.footer-social-end-pay-card .social-list {
+    width: 100%;
+    display: flex;
+}
+
+.footer-social-end-pay-card .social-list ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.footer-social-end-pay-card .social-list ul li  a{
+    color: black;
+    text-decoration: none;
+    border: 1px solid rgb(201, 200, 200);
+    display: flex;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.footer-social-end-pay-card .social-list ul li a:hover{
+    border: 1px solid rgb(112, 112, 112);
+}
+
+.footer-pay-card-icon {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.footer-pay-card-icon ul {
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+}
+
+.footer-pay-card-icon ul li  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-pay-card-icon ul li img {
+    display: flex;
+    border: 1px solid rgb(223, 223, 245);
+    width: 100%;
+    padding: 0px 3px 0px 3px;
+    background-color: white;
+    border-radius: 3px;
+
+}
+
+.footer-button {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-button .btn {
+    width: 155.3px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.footer-button .btn:hover {
+   border-color: black;
+   border-width: 2px;
+}
+
+.footer-button .btn a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.footer-button .btn a span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.linea-3 {
+    display: flex;
+    margin: 13px 0px 20px 0px;
+    background-color: rgb(219, 217, 217);
+    height: 0.5px;
+}
+
+.footer-end {
+    width: 100%;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.footer-end .copyrightInterIKEA {
+    display: flex;
+    flex: 0 0 auto;
+    font-size: .75rem;
+}
+
+.footer-end .footer-legal-links {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.footer-end ul {
+    list-style-type: none;
+    font-size: .75rem;
+    text-align: end;
+}
+
+.footer-end ul li {
+    display: inline-block;
+    margin-block-end: 20px;
+    margin-inline: 1.25rem 0;
+}
+
+.footer-end ul li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.financial-details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+    line-height: 1.571;
+}
+
+.financial-details p:nth-of-type(1),p:nth-of-type(2),p:nth-of-type(3){
+    font-size: .75rem;
+    margin-bottom: .75rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* @media screen and (min-width: 1024px) {} */
