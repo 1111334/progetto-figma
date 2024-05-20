@@ -247,6 +247,12 @@ header .container {
     align-items: center;
     /* background-color: green; */
     padding: 0px 48px;
+    cursor: pointer;
+}
+
+.content-body .icon-description a  {
+    text-decoration: none;
+    color: black;
 }
 
 .container-selezione-negozio .icon-description {
@@ -262,7 +268,6 @@ header .container {
 }
 
 .news-section {
-    display: flex;
     padding: 0px 48px;
     margin-bottom: 30px;
 }
@@ -281,17 +286,25 @@ header .container {
 }
 
 .news-title h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .news-title p {
     font-weight: normal;
+    font-size: .95rem;
+    color: rgb(114, 113, 113);
+}
+
+.container-button-news{
+    width: 40%;
+    /* background-color: red; */
+    display: flex;   
 }
 
 .news-content .news-button {
     position: absolute;
     right: 0;
-    top: 83px;
+    top: 50px;
     border-radius: 64px;
     padding: 13px 20px 13px 20px;
     background: none;
@@ -803,10 +816,6 @@ che sono figli degli ultimi tre elementi con la classe .content-img-and-descript
     flex: 1 1 auto;
 }
 
-/* .content-image-1 img:nth-of-type(1) {
-    height: 350px;
-} */
-
 .content-image-2 img:nth-of-type(2) {
     height: 250px;
 }
@@ -903,13 +912,17 @@ che sono figli degli ultimi tre elementi con la classe .content-img-and-descript
     flex-direction: column;
 }
 
-.description-product-end-home-service p:nth-of-type(1),
-p:nth-of-type(2),
-p:nth-of-type(3) {
+.description-product-end-home-service div p:nth-of-type(1),
+div p:nth-of-type(2),
+div p:nth-of-type(3) {
     line-height: 1.45;
     letter-spacing: -0.0042em;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 12px;
+    color: black;
+    font-size: 0.9rem;
+    color: rgb(119, 118, 118);
+    
 }
 
 .description-product-end-home-service div {
@@ -937,8 +950,8 @@ p:nth-of-type(3) {
     padding: 0 48px;
     margin-bottom: 30px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: #333;
+    font-size: .90rem;
+    color: #807e7e;
     line-height: 1.45;
     letter-spacing: -0.0042em;
 }
@@ -955,7 +968,7 @@ p:nth-of-type(3) {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 
 .button-scroll-up .btn {
@@ -1250,4 +1263,4 @@ p:nth-of-type(2) {
 
 
 
-/* @media screen and (min-width: 1024px) {} */
+/* @media screen and (min-width: 768px) {} */
